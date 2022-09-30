@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-/* :root {
+:root {
     --primary: #dc4f72;
     --secondary: #0d5fa8;
     --title-color: #2C3038;
@@ -14,7 +14,7 @@
     --card-box-shadow: 1px 5px 7.5px rgba(196, 196, 196, 0.2);
     --card-hover-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.09);
     --transformY: translateY(-0.5rem);
-} */
+} 
 
 html,
 body {
@@ -26,7 +26,7 @@ a, a:hover {
 p {
     margin: 0;
     padding: 0;
-    color: #5a5a5a;
+    color: var(--text-color);
 }
 .container {
     width: 100%;
@@ -39,20 +39,26 @@ p {
     font-size: 16px;
     line-height: 20px;
     font-weight: 700;
-    color: #dc4f72;
+    color: var(--primary);
     text-transform: uppercase;
     margin-bottom: 5px;
 }
 
 .btn-primary {
     color: #fff;
-    background-color: #dc4f72;
-    border-color: #dc4f72;
+    background-color: var(--primary);
+    border-color: var(--primary);
 }
 .btn-primary:hover {
     color: #fff;
     background-color: #d62f58;
     border-color: #cf2952;
+}
+.btn-primary.focus, .btn-primary:focus {
+    color: #fff;
+    background-color: var(--primary);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 .2remrgba(38,143,255,.5);
 }
 
 
@@ -146,7 +152,7 @@ header {
     font-size: 26px;
     font-weight: 700;
     text-transform: capitalize;
-    color: #dc4f72;
+    color: var(--primary);
     letter-spacing: -1px;
 }
 
@@ -358,7 +364,7 @@ button.navbar-toggler.collapsed .icon-expand {
         width: 34px;
         height: 34px;
         display: inline-block;
-        background: #dc4f72;
+        background: var(--primary);
         border-radius: 4px;
         text-align: center;
     }
@@ -367,7 +373,7 @@ button.navbar-toggler.collapsed .icon-expand {
         line-height: 1.2em;
         color: #fff;
         line-height: 34px;
-        background-color: #dc4f72;
+        background-color: var(--primary);
         border-radius: 5px;
     }
 
@@ -394,14 +400,14 @@ button.navbar-toggler.collapsed .icon-expand {
 
 /* nút home mặc định màu hồng  */
 .navbar-expand-lg .navbar-nav .nav-item.active .nav-link {
-    color: #dc4f72;
+    color: var(--primary);
 }
 
 a.nav-link:before,
 a.dropdown-item:before {
     position: absolute;
     content: "";
-    background: #dc4f72;
+    background: var(--primary);
     width: 0px;
     height: 2px;
     bottom: 13px;
@@ -409,7 +415,7 @@ a.dropdown-item:before {
 
 
 .navbar-expand-lg .navbar-nav .nav-link:hover {
-    color: #dc4f72;
+    color: var(--primary);
 }
 
 .navbar-expand-lg .navbar-nav .nav-link:hover:before,
@@ -427,13 +433,13 @@ nav ul li a:before {
 
 /* Thanh dropdown nut pages  */
 a.dropdown-item:hover {
-    color: #dc4f72;
+    color: var(--primary);
 }
 
 a.dropdown-item {
     font-weight: 400;
     font-size: 16px;
-    color: #2C3038;
+    color: var(--title-color);
     position: relative;
     padding-top: 0;
     padding-bottom: 14px;
@@ -448,7 +454,7 @@ a.dropdown-item {
     padding: 14px 0;
     font-size: 16px;
     font-weight: 400;
-    color: #2c3038;
+    color: var(--title-color);
 }
 
 .theme-button {
@@ -463,14 +469,14 @@ a.dropdown-item {
 }
 
 .btn-outline-primary {
-    color: #dc4f72;
-    border-color: #dc4f72;
+    color: var(--primary);
+    border-color: var(--primary);
 }
 
 .btn-outline-primary:hover {
     color: #fff;
-    background-color: #dc4f72;
-    border-color: #dc4f72;
+    background-color: var(--primary);
+    border-color: var(--primary);
 }
 
 .dropdown-toggle::after {
@@ -518,11 +524,11 @@ a.dropdown-item {
 .content-left h3 {
     font-size: 50px;
     line-height: 57.5px;
-    color: #2c3038;
+    color: var(--title-color);
     font-weight: 700;
 }
 .content-left p {
-    color: #5a5a5a;
+    color: var(--text-color);
     font-size: 20px;
     line-height: 28px;
     font-weight: 400;
@@ -541,13 +547,13 @@ a.dropdown-item {
 }
 
 .header-section h3 {
-    color: #2c3038;
+    color: var(--title-color);
     font-size: 46px;
     line-height: 1;
     font-weight: 700;
 }
 .header-section p {
-    color: #5a5a5a;
+    color: var(--text-color);
     font-size: 16px;
     line-height: 22.5px;
     font-weight: 400;
@@ -571,7 +577,7 @@ a.dropdown-item {
 }
 
 .tool-for-business .s-block h3 {
-    color: #2C3038;
+    color: var(--title-color);
     font-size: 26px;
     line-height: 35px;
     font-weight: 700;
@@ -587,7 +593,7 @@ a.dropdown-item {
 }
 
 .tool-for-business .s-block p {
-    color: #5a5a5a;
+    color: var(--text-color);
     margin-top: 15px;
     font-size: 16px;
     line-height: 24.5px;
@@ -607,14 +613,14 @@ a.dropdown-item {
 .about-our .book-info h3 {
     font-size: 35px;
     line-height: 40px;
-    color: #2C3038;
+    color: var(--title-color);
     font-weight: 700;
 }
 .about-our .book-info p {
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
-    color: #5a5a5a;
+    color: var(--text-color);
     line-height: 24.4px;
 }
 
@@ -638,7 +644,7 @@ img.img-curve {
 .number p.counter {
     font-size: 50px;
     line-height: 1;
-    color: #dc4f72;
+    color: var(--primary);
     margin-bottom: 0;
     font-weight: 700;
     margin-bottom: 15px;
@@ -649,6 +655,6 @@ img.img-curve {
     font-size: 16px;
     line-height: 24.5px;
     text-transform: capitalize;
-    color: #2C3038;
+    color: var(--title-color);
     font-weight: 700;
 }
