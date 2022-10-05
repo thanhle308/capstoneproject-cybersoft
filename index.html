@@ -280,6 +280,7 @@
             </div>
         </section>
     </section>
+
     <!-- QUESTIONS AND ANSWERS -->
     <div class="questions__answers py-5" id="faq">
         <div class="container py-lg-5">
@@ -367,8 +368,93 @@
         </div>
 
     </div>
-
-
+    <!-- FEATURED CASES  -->
+    <section class="product py-5 mb-4">
+        <div class="container py-lg-3">
+            <div class="header-section text-center mx-auto">
+                <h6 class="sub-title">Featured Cases</h6>
+                <h3>Completed Projects </h3>
+                <p class="my-3"> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                    Nulla mollis dapibus nunc, ut rhoncus
+                    turpis sodales quis. Integer sit amet mattis quam.</p>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-10 mx-auto">
+                    <div>
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <button class="nav-link active" id="nav-home-tab" data-toggle="tab"
+                                    data-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                                    aria-selected="true">Project One</button>
+                                <button class="nav-link" id="nav-profile-tab" data-toggle="tab"
+                                    data-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
+                                    aria-selected="false">Project Two</button>
+                                <button class="nav-link" id="nav-contact-tab" data-toggle="tab"
+                                    data-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact"
+                                    aria-selected="false">Project Three</button>
+                            </div>
+                        </nav>
+                        <div class="tab-content mt-5" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
+                                aria-labelledby="nav-home-tab">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h3>Why a visual identity system is more memorable</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit, adipisicing elit repudiandae perferendis dolores
+                                            praesentium nulla quibusdam repellendus. consequatur minus
+                                            aliquam corrupti blanditiis, necessitatibus consectetur modi ipsum natus
+                                            accusantium sit pariatur.
+                                        </p>
+                                        <a href="#url" class="btn btn-outline-primary theme-button mt-3">Know More</a>
+                                    </div>
+                                    <div class="col-md-6 mt-md-0">
+                                        <img src="./img/b4.jpg" class="img-fluid img-curve" alt="project image">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel"
+                                aria-labelledby="nav-profile-tab">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="./img/b5.jpg" class="img-fluid img-curve" alt="project image">
+                                    </div>
+                                    <div class="col-md-6 mt-md-0">
+                                        <h3>Make website that looks Lorem, ipsum dolor.</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit, adipisicing elit repudiandae perferendis dolores
+                                            praesentium nulla quibusdam repellendus. consequatur minus
+                                            aliquam corrupti blanditiis, necessitatibus consectetur modi ipsum natus
+                                            accusantium sit pariatur.
+                                        </p>
+                                        <a href="#url" class="btn btn-outline-primary theme-button mt-3">Know More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-contact" role="tabpanel"
+                                aria-labelledby="nav-contact-tab">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h3>Why a visual identity system is more memorable</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit, adipisicing elit repudiandae perferendis dolores
+                                            praesentium nulla quibusdam repellendus. consequatur minus
+                                            aliquam corrupti blanditiis, necessitatibus consectetur modi ipsum natus
+                                            accusantium sit pariatur.
+                                        </p>
+                                        <a href="#url" class="btn btn-outline-primary theme-button mt-3">Know More</a>
+                                    </div>
+                                    <div class="col-md-6 mt-md-0">
+                                        <img src="./img/b6.jpg" class="img-fluid img-curve" alt="project image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
@@ -378,7 +464,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
         integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
-    </script>
+        </script>
+
+
     <!-- OWL-carousel -->
     <script src="./js/owl.carousel.js"></script>
     <!-- script for blog -->
@@ -484,10 +572,31 @@
     </script>
     <!-- //customers owlcarousel -->
     <!-- END OWL-carousel -->
+
+
     <!-- easy Responsive Tabs -->
-   
+    <script src="./js/easyResponsiveTabs.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //Horizontal Tab
+            $('#parentHorizontalTab').easyResponsiveTabs({
+                type: 'default', //Types: default, vertical, accordion
+                width: 'auto', //auto or any width like 600px
+                fit: true, // 100% fit in a container
+                tabidentify: 'hor_1', // The tab groups identifier
+                activate: function (event) { // Callback function if tab is switched
+                    var $tab = $(this);
+                    var $info = $('#nested-tabInfo');
+                    var $name = $('span', $info);
+                    $name.text($tab.text());
+                    $info.show();
+                }
+            });
+        });
+    </script>
 
     <!--End easy Responsive Tabs -->
+
     <!-- Waypoints, countup ,NUMBER  -->
     <script src="./js/jquery.waypoints.min.js"></script>
     <script src="./js/jquery.countup.js"></script>
