@@ -1115,9 +1115,16 @@ input {
     line-height: 24.5px;
 }
 
+/* PEOPLE SAY  */
 
 
 
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/* END PEOPLE SAY  */
 
 /* FOOTER  */
 .w3l-footer .w3l-footer-16-main.py-5 {
@@ -1219,12 +1226,14 @@ input {
     font-size: 15px;
     line-height: 36px;
 }
-
-
-
-
-
-
+.w3l-footer .w3l-footer-16-main h3 a:hover, .w3l-footer .footer-gd-16 li a:hover, .w3l-footer .w3l-footer-16-main p a:hover {
+    opacity: 0.8;
+    color: var(--primary);
+}
+.w3l-footer ul.social li a:hover {
+    color: var(--primary);
+    transition: 0.3s ease;
+}
 /* MOVETOP */
 .w3l-footer #movetop {
     display: none;
