@@ -770,6 +770,11 @@ img.img-curve {
     background-color: #f8f9fa;
     border-color: #f8f9fa;
 }
+.btn-light:hover {
+    color: #212529;
+    background-color: #e2e6ea;
+    border-color: #dae0e5;
+}
 
 /* EXPLORE SOLUTION */
 .solution .grids5-info {
@@ -1229,16 +1234,21 @@ input {
 /* Bỏ nút chuyển lide trái phải  */
 .w3l-testimonials .owl-two.owl-theme .owl-nav [class*=owl-prev],
 .w3l-testimonials .owl-two.owl-theme .owl-nav [class*=owl-next] {
-  display: none; }
+    display: none;
+}
+
 /* Bỏ nút chuyển lide trái phải  */
 
-.owl-theme .owl-nav.disabled + .owl-dots {
+.owl-theme .owl-nav.disabled+.owl-dots {
     margin-top: 30px;
 }
-.owl-theme .owl-dots, .owl-theme .owl-nav {
+
+.owl-theme .owl-dots,
+.owl-theme .owl-nav {
     text-align: center;
     -webkit-tap-highlight-color: transparent;
 }
+
 .owl-dots {
     margin-top: 0px;
     bottom: -55px;
@@ -1246,15 +1256,20 @@ input {
     left: 0;
     right: 0;
 }
+
 .owl-theme .owl-dots .owl-dot {
     display: inline-block;
     zoom: 1;
     background: transparent;
     padding: 0;
 }
-.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot {
+
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel button.owl-dot {
     border: none;
 }
+
 .owl-theme .owl-dots .owl-dot span {
     width: 40px;
     height: 5px;
@@ -1266,7 +1281,9 @@ input {
     border-radius: 0;
     position: relative;
 }
-.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
     background: var(--primary);
 }
 
@@ -1471,4 +1488,131 @@ input {
     /* back-to-top button visible */
     visibility: visible;
     opacity: 1;
+}
+/* DARK MODE  */
+.nav-item button{
+    display: inline-block;
+    text-transform: capitalize;
+    transition: all 0.5s ease;
+    padding: 18px 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--title-color);
+}
+#switchButton .fa-moon:hover,
+.dark #switchButton .fa-sun:hover{
+    color: var(--primary) ;
+}
+/* Light theme */
+#switchButton .fa-sun {
+    display: none;
+  }
+#switchButton .fa-moon {
+    display: block;
+  }
+/* Dark Theme*/
+  .dark #switchButton .fa-sun {
+    display: block;
+    color: white;
+  }
+  .dark #switchButton .fa-moon {
+    display: none;
+  }
+  .dark #site-header , .dark .dropdown-menu {
+    background: #121212;
+  }
+  .dark .dropdown-menu .dropdown-item,
+  .dark .navbar-expand-lg .navbar-nav .nav-link {
+    color: #DFE4EF;
+  }
+  .dark a.dropdown-item:hover {
+    color: var(--primary);
+}
+ .dark .navbar-expand-lg .navbar-nav .nav-link:hover {
+    color: var(--primary);
+}
+
+.dark .carousel-capstone .content {
+    background: #121212;
+    background-image: linear-gradient(to right, #121212, rgba(0, 0, 0, 0.8)), url(../img/banner.jpg);
+}
+.dark .owl-theme .owl-dots .owl-dot span,
+.dark .w3l-testimonials .slider-info,
+.dark .w3l-footer .end-column,
+.dark #nav-tab,
+.dark .nav-tabs .nav-link,
+.dark .questions__answers .w3l-faq ul li,
+.dark .solution .blog-info,
+.dark .btn-light,
+.dark .we-are-true,
+.dark .stats_info,
+.dark .tool-for-business,
+.dark .solution,
+.dark .product,
+.dark .w3l-index6 {
+    background: #121212 !important;
+}
+.dark .btn-light:hover {
+    background-color: #2b2e31;
+    border-color: #dae0e5;
+}
+
+.dark .w3l-footer .subscribe input[type="email"],
+.dark .number,
+.dark .s-block ,
+.dark .about-our , 
+.dark .questions__answers,
+.dark .w3l-footer .w3l-footer-16-main {
+    background: #1f2022;
+}
+.dark .solution .grid-view .d-block p.date,
+.dark .w3l-testimonials .message p,
+.dark .w3l-footer .w3l-footer-16-main h4,
+.dark .w3l-footer .w3l-footer-16-main h3,
+.dark .w3l-footer .w3l-footer-16-main p a,
+.dark .w3l-footer ul.social li a,
+.dark .questions__answers .w3l-faq h2,
+.dark .solution .grid-view .grids5-info h4 a,
+.dark .btn-light,
+.dark .number .stats_info h4,
+.dark .about-our h3,
+.dark .s-block h3,
+.dark .content-left h3,
+.dark .header-section h3{
+    color: #DFE4EF;
+}
+.dark .w3l-testimonials .message span,
+.dark .w3l-testimonials .name p,
+.dark .w3l-footer .footer-gd-16 li a,
+.dark .w3l-footer .w3l-footer-16-main p,
+.dark .questions__answers .w3l-faq p,
+.dark .solution .grid-view .grids5-info p,
+.dark p,
+.dark .about-our p,
+.dark .s-block p,
+.dark .content-left p,
+.dark .header-section p{
+    color: #a9a9a9;
+}
+.dark .tool-for-business .s-block:hover {
+    background-color:#121212 ;
+}
+.dark .w3l-footer ul.social li a:hover {
+    color: var(--primary);
+    transition: 0.3s ease;
+}
+.dark .w3l-footer .footer-gd-16 li a:hover,
+.dark .w3l-footer .w3l-footer-16-main p a:hover {
+    opacity: 0.8;
+    color: var(--primary);
+}
+.dark .w3l-testimonials .testimonials {
+    background-size: cover;
+    background-image: linear-gradient(to right, rgba(69, 70, 72, 0.77), rgba(69, 70, 72, 0.77)), url(../img/b2.jpg);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.dark .owl-theme .owl-dots .owl-dot.active span {
+    background: var(--primary) !important;
 }
