@@ -1565,6 +1565,7 @@ input {
 .dark .w3l-footer .w3l-footer-16-main {
     background: #1f2022;
 }
+.dark .tab-content h3,
 .dark .solution .grid-view .d-block p.date,
 .dark .w3l-testimonials .message p,
 .dark .w3l-footer .w3l-footer-16-main h4,
@@ -1615,4 +1616,13 @@ input {
 }
 .dark .owl-theme .owl-dots .owl-dot.active span {
     background: var(--primary) !important;
+}
+.dark .nav-tabs .nav-link:hover {
+    border-color: #121212;
+    border-bottom: 3px solid #eee;
+}
+.dark .nav-tabs .nav-link.active {
+    color: #495057;
+    background-color: #fff;
+    border-color:#121212;
 }
