@@ -1310,7 +1310,7 @@
 		if (event !== undefined) {
 			event.stopPropagation();
 
-			// Catch only owl-stage transitionEnd event
+			// Catch only  transitionEnd event
 			if ((event.target || event.srcElement || event.originalTarget) !== this.$stage.get(0)) {
 				return false;
 			}
