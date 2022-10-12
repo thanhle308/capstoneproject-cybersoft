@@ -1131,6 +1131,48 @@ input {
     font-size: 16px;
     line-height: 24.5px;
 }
+.product .container .accordion{
+    display: none;
+}
+
+@media ( max-width: 768px) {
+    .product .container .product-tab {
+        display: none !important;
+    }
+    .product .container .accordion {
+        display: block;
+    }
+}
+/* Khi không sổ xuông thì dùng css này  */
+button.collapsed span.resp-arrow {
+    width: 0;
+    height: 0;
+    float: right;
+    margin-top: 3px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 12px solid #c1c1c1;
+    border-bottom: 0;
+}
+/* Khi sổ xuống thì dùng css này  */
+.resp-arrow {
+    width: 0;
+    height: 0;
+    float: right;
+    margin-top: 3px;
+    border: none;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 12px solid #9B9797;
+}
+
+.accordion .card-header .btn-link {
+    text-decoration: none;
+}
+.accordion .card-header .btn-link:hover {
+    color: var(--primary);
+    text-decoration: none;
+}
 
 /* PEOPLE SAY  */
 .w3l-testimonials .testimonials {
@@ -1560,7 +1602,7 @@ input {
     background-color: #2b2e31;
     border-color: #dae0e5;
 }
-
+.dark .accordion .card,
 .dark .w3l-footer .subscribe input[type="email"],
 .dark .number,
 .dark .s-block ,
@@ -1569,6 +1611,8 @@ input {
 .dark .w3l-footer .w3l-footer-16-main {
     background: #1f2022;
 }
+.dark .accordion h3,
+.dark .accordion .card h2 button.collapsed,
 .dark .tab-content h3,
 .dark .solution .grid-view .d-block p.date,
 .dark .w3l-testimonials .message p,
@@ -1629,4 +1673,16 @@ input {
     color: #495057;
     background-color: #fff;
     border-color:#121212;
+}
+.dark .accordion .card  {
+    border: 1px solid #eee;
+}
+.dark .collapse.show {
+    border-top: 3px solid var(--primary);
+}
+.dark .accordion .card h2 button.collapsed:hover{
+    color: var(--primary);
+}
+.dark .accordion .card h2 button{
+    color: var(--primary);
 }
